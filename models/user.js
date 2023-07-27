@@ -36,6 +36,11 @@ User.init(
         isEmail: true
       }
     },
+    points: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+      allowNull: true
+    },
     password: {
       type: DataTypes.STRING,
       allowNull: false,
