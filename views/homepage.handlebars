@@ -1,0 +1,13 @@
+{{#each user as |users|}}
+     <div class="card" class="mx-auto pt-8" style="width: 700px;">
+  <div class="card-header">
+    {{name}}
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p>{{email}}</p>
+      <footer class="blockquote-footer">By: {{password}}</cite></footer>
+    </blockquote>
+  </div>
+</div> 
+      {{/each}}
