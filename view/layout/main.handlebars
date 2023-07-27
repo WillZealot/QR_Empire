@@ -7,16 +7,28 @@
 </head>
 <body>
   <div class="header">
- 
+    <header>
+      <h1>QR Empire</h1>
+    </header>
+    <nav>
+    <a href="/">Home</a>
+    {{#if loggedIn}}
+    <button id="logout">Logout</button>
+    {{else}}
+    <a id="login" href="api/login">Login</a>
+    <a id="signup" href="api/user">Sign Up</a>
+    {{/if}}
+  </nav>
   </div>
-  <div class="content">
-  
-  </div>
-  <div class="sidebar">
+  <main>
+    <div>
+      <!--iterate over each post and display any available-->
+    {{{body}}}
+    </div>
     
-  </div>
-  <div class="footer">
- 
-  </div>
+  </main>
+  {{#if loggedIn}}
+  <script src="../../public/logout.js"></script>
+  {{/if}}
 </body>
 </html>
