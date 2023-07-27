@@ -1,7 +1,7 @@
 const router = require('express').Router()
 const { User, QRLink } = require('../models')
 // Import the custom middleware
-const withAuth = require('../utils/auth')
+// const withAuth = require('../utils/auth')
 
 // GET all post for homepage
 router.get('/', async (req, res) => {
