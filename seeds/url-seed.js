@@ -8,7 +8,7 @@ const urlSeed = [{
 },
 {
     url:'https://www.yahoo.com/',
-    userId: "3"
+    userId: "3",
     // Add more URLs as needed
 }
   ];
