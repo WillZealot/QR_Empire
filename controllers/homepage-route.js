@@ -1,7 +1,7 @@
-const router = require('express').Router();
-const { User , QRLink } = require('../models');
+const router = require('express').Router()
+const { User, QRLink } = require('../models')
 // Import the custom middleware
-const withAuth = require('../utils/auth');
+const withAuth = require('../utils/auth')
 
 // GET all post for homepage
 router.get('/', async (req, res) => {
@@ -10,20 +10,20 @@ router.get('/', async (req, res) => {
       include: [
         {
           model: QRLink,
-          attributes: ['description', 'date_created', 'user_id' ],
-        },
-      ],
-    });
+          attributes: ['description', 'date_created', 'user_id']
+        }
+      ]
+    })
 
-    const user = userData.map((post) => 
-      post.get({plain: true})
-      );
+    const user = userData.map((post) =>
+      post.get({ plain: true })
+    )
 
-    res.render('homepage',{
-      posts,
-    });
+    res.render('homepage', {
+      user
+    })
   } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
+    console.log(err)
+    res.status(500).json(err)
   }
-});
+})
