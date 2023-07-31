@@ -17,8 +17,7 @@
   {{#each qrlinks as |qrlink|}}
   <div class="card-header">
     <blockquote class="blockquote mb-0">
-      <img src="https://qrickit.com/api/qr.php?d={{qrlink.description}}&addtext=Hello+World&txtcolor=442EFF&fgdcolor=76103C
-          &bgdcolor=C0F912&qrsize=150&t=p&e=m" alt="QR Code" class="img-thumbnail">
+      <img src="https://qrickit.com/api/qr.php?d={{qrlink.description}}&qrsize=150&t=p&e=m">
       <p>{{qrlink.description}}</p>
       <footer class="blockquote-footer">Created on {{format_date qrlink.date_created}}</cite></footer>
     </blockquote>
