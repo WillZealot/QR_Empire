@@ -1,18 +1,22 @@
-const router = require('express').Router()
+// const router = require('express').Router()
+// const { User, QRLink } = require('../../models')
 
-//const { User, QRLink } = require('../../model') will be needing this soon
+// router.get('/', async (req, res) => {
+//   try {
+//     // Find the logged in user based on the session ID
+//     const userData = await User.findByPk(req.session.user_id, {
+//       attributes: { exclude: ['password'] },
+//       include: [{ model: QRLink }],
+//     });
 
-router.get('/', async (req, res) => {
-    try {
-      res.status(200).render('dashboard')
-    } catch (err) {
-      res.status(400).json(err)
-    }
-  })
-  
+//     const users = userData.get({ plain: true });
 
-
-
-
-
-module.exports = router
+//     res.render('dashboard', {
+//       ...users,
+//       logged_in: true
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
+// module.exports = router

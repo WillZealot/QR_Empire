@@ -1,13 +1,21 @@
-{{#each user as |users|}}
+{{!-- {{#each users as |user|}}
      <div class="card" class="mx-auto pt-8" style="width: 700px;">
   <div class="card-header">
-    {{name}}
+    {{user.description}} {{user.user.name}}
   </div>
   <div class="card-body">
     <blockquote class="blockquote mb-0">
-      <p>{{email}}</p>
-      <footer class="blockquote-footer">By: {{password}}</cite></footer>
+      <p>{{user.QRLink.description}}</p>
+      <footer class="blockquote-footer">By: {{format_date date_created}}</cite></footer>
     </blockquote>
   </div>
-</div> 
-      {{/each}}
+</div>
+</br> 
+{{/each}} --}}
+</br>
+<div>
+  <!-- Content here -->
+  <p class="homepage">Enter the QR code transformation realm at QREmpire.com. Create an account to access a suite of powerful tools. 
+    Discover the QR code community, see the number of QR codes you've generated, and be inspired by others' prolific creations. 
+    Experience the magic of URL transformation at QREmpire.com.</p>
+  </div>

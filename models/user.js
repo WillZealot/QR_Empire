@@ -22,11 +22,11 @@ User.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true
+      autoIncrement: true,
     },
     name: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
     },
     email: {
       type: DataTypes.STRING,
@@ -34,38 +34,38 @@ User.init(
       unique: true,
       validate: {
         isEmail: true
-      }
+      },
     },
     points: {
       type: DataTypes.INTEGER,
       defaultValue: 0,
-      allowNull: true
+      allowNull: true,
     },
     password: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [8]
-      }
-    }
+      },
+    },
   },
   {
     hooks: {
       beforeCreate: async (newUserData) => {
-        newUserData.password = await bcrypt.hash(newUserData.password, 10)
-        return newUserData
+        newUserData.password = await bcrypt.hash(newUserData.password, 10);
+        return newUserData;
       },
       beforeUpdate: async (updatedUserData) => {
-        updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10)
-        return updatedUserData
-      }
+        updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+        return updatedUserData;
+      },
     },
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'user'
+    modelName: 'users',
   }
 )
 
-module.exports = User
+module.exports = User;

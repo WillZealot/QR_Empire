@@ -22,9 +22,9 @@ QRLink.init(
     user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'user',
+        model: 'users',
         key: 'id'
-      }
+      },
     }
   },
   {
@@ -32,8 +32,8 @@ QRLink.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'QRLink'
+    modelName: 'qrlinks',
   }
 )
 
-module.exports = QRLink
+module.exports = QRLink;

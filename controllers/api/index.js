@@ -1,15 +1,9 @@
-const router = require('express').Router()
+const router = require('express').Router();
 
-const signUpRoute = require('./signup.js')
-const dashboardRoute = require('./dashboard.js')
-const logInRoute = require('./login-route.js')
-const viewUserRoute = require('./viewUser-route.js')
-const leaderboardRoute = require('./leaderboard-route.js')
+const users = require('./user-route.js');
+const urlRoute = require('./qrlink-route.js');
 
-router.use('/signUp', signUpRoute)
-router.use('/logIn', logInRoute)
-router.use('/dashboard', dashboardRoute)
-router.use('/viewUser', viewUserRoute)
-router.use('/leaderboard', leaderboardRoute)
+router.use('/users', users);
+router.use('/link', urlRoute);
 
-module.exports = router
+module.exports = router;
