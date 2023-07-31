@@ -1,5 +1,4 @@
 <div class='card-header col-md-10'>
-
 <h1>Hello {{user.name}}</h1>
     <div>
         <h2>URLs-Recently-Generated</h2>
@@ -10,5 +9,27 @@
                {{/each }} 
     </div>
      <button id="clear">Clear Results</button>
-</div>              
+</div>               --}}
+<h2>Hi {{name}}</h2>
+{{#if qrlinks.length}}
+<div class="card" class="mx-auto pt-8" style="width: 700px;">
+  {{#each qrlinks as |qrlink|}}
+  <div class="card-header">
+    <blockquote class="blockquote mb-0">
+      <p>{{qrlink.description}}</p>
+      <footer class="blockquote-footer">Created on {{format_date qrlink.date_created}}</cite></footer>
+    </blockquote>
+  </div>
+  </br>
+  {{/each}}
+</div>
+</br>
+{{/if}}
+<label for="exampleDataList" class="form-label">Url Insert:</label>
+<input class="form-control" id="UrlBtn" placeholder="Type to your new Url">
+</br>
+<div class="d-grid gap-2 d-md-block">
+  <button class="btn btn-primary" type="button" id="newUrlBtn">Add New Url</button>
+</div>
 
+<script src="/js/newUrl.js" ></script>

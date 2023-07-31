@@ -1,0 +1,8 @@
+.homepage {
+    width: 400px;
+    height: 450px;
+    background-color: aquamarine;
+    border: 5px solid black ;
+    border-radius: 3px;
+    margin: 250px;
+}

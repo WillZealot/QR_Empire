@@ -16,5 +16,8 @@ module.exports = {
         }
     
         return word;
-      }
+      },
+      format_date_bao: (date) => {
+        return date.toLocaleDateString();
+        },
     };

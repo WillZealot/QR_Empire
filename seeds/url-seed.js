@@ -11,7 +11,10 @@ const urlSeed = [{
 {
    description:'https://www.yahoo.com/',
    user_id: 3
-    // Add more URLs as needed
+},
+{
+   description:'https://www.apple.com/',
+   user_id: 3
 }
   ];
   
