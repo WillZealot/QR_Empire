@@ -16,6 +16,7 @@
   {{#each qrlinks as |qrlink|}}
   <div class="card-header">
     <blockquote class="blockquote mb-0">
+      <img src="https://qrickit.com/api/qr.php?d={{qrlink.description}}&qrsize=150&t=p&e=m">
       <p>{{qrlink.description}}</p>
       <footer class="blockquote-footer">Created on {{format_date qrlink.date_created}}</cite></footer>
     </blockquote>
@@ -33,3 +34,4 @@
 </div>
 
 <script src="/js/newUrl.js" ></script>
+
