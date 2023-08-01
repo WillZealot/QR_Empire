@@ -1,37 +1,31 @@
+</br>
 <div class='card-header col-md-10'>
-<h1>Hello {{user.name}}</h1>
+  <h1>Hello {{name}}</h1>
     <div>
-        <h2>URLs-Recently-Generated</h2>
+        <h2 class="margin">URLs-Recently-Generated</h2>
     </div>
-    <div class="link-group"></div>
-     {{#each QRlink as |Link|}}
-                <li>{{Link.description}}</li>
-               {{/each }} 
+  </div>
+<div class="margin">
+  {{#if qrlinks.length}}
+  <div class="card" class="mx-auto pt-8" style="width: 700px;">
+    <div class="card-header">
+      <blockquote class="blockquote mb-0">
+         {{#each qrlinks as |qrlink|}}
+          <img src="https://qrickit.com/api/qr.php?d={{qrlink.description}}&addtext={{qrlink.description}}&qrsize=150&t=p&e=m" alt="Created on {{format_date qrlink.date_created}}">
+          {{/each}}
+      </blockquote>
     </div>
-     <button id="clear">Clear Results</button>
-</div>               --}}
-<h2>Hi {{name}}</h2>
-{{#if qrlinks.length}}
-<div class="card" class="mx-auto pt-8" style="width: 700px;">
-  {{#each qrlinks as |qrlink|}}
-  <div class="card-header">
-    <blockquote class="blockquote mb-0">
-      <img src="https://qrickit.com/api/qr.php?d={{qrlink.description}}&qrsize=150&t=p&e=m">
-      <p>{{qrlink.description}}</p>
-      <footer class="blockquote-footer">Created on {{format_date qrlink.date_created}}</cite></footer>
-    </blockquote>
+    </br>
   </div>
   </br>
-  {{/each}}
+  {{/if}}
+  <label for="exampleDataList" class="form-label font">Url Insert:</label>
+  <p>
+    <input class="form-control font" id="UrlBtn" placeholder="Insert your new Url">
+  </p>
+  <div class="d-grid gap-2 d-md-block">
+    <button class="btn btn-primary font" type="button" id="newUrlBtn">Add New Url</button>
+  </div>
 </div>
-</br>
-{{/if}}
-<label for="exampleDataList" class="form-label">Url Insert:</label>
-<input class="form-control" id="UrlBtn" placeholder="Type to your new Url">
-</br>
-<div class="d-grid gap-2 d-md-block">
-  <button class="btn btn-primary" type="button" id="newUrlBtn">Add New Url</button>
-</div>
-
 <script src="/js/newUrl.js" ></script>
 
