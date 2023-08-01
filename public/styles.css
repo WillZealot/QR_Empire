@@ -1,8 +1,29 @@
+*{
+    font-family:sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-image:url("./assets/146685.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
 .homepage {
-    width: 400px;
-    height: 450px;
-    background-color: aquamarine;
+    width: 700px;
+    height: auto;
+    background-color: rgba(255, 215, 0,.5);
     border: 5px solid black ;
     border-radius: 3px;
     margin: 250px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#homepageText{
+    color: white;
+    font-size: large;
+    display: flex;
+    flex-wrap: wrap;
 }
