@@ -17,6 +17,39 @@ body {
     border: 5px solid black ;
     border-radius: 3px;
     margin: 250px;
+}
+
+.login, .signup {
+    margin-top: 10%;
+    font-weight: bolder;
+}
+    
+.form-control {
+    display:flex;
+    width: 400px; 
+    font-size: 16px; 
+    margin-left: -20%;
+    padding: 10px;
+}
+    
+.form-group{
+    padding-left: 45%;
+    margin-top: 23px;
+}
+       
+.btn-primary, .instead {
+    margin-left: 45%;
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+
+.never {
+    margin-left: -14%;
+}
+.instead  {
+    margin-left: 43.5%;
+}
+=======
   
 
 }
