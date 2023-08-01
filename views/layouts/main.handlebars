@@ -8,6 +8,8 @@
 </head>
 <body>
   <!-- Image and text -->
+  <header>
+    <nav class="navbar navbar-light bg-light">
   <header class="mainHeader">
     <nav class="navbar navbar-light bg-light ">
       <a class="navbar-brand" href="/">
@@ -21,10 +23,22 @@
         </svg>
       </a>
       <ul class="nav justify-content-end">
+        {{!-- <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/dashboard" tabindex="-1" aria-disabled="true">My Profile</a>
+        </li> --}}
         <li class="nav-item">
           <a class="nav-link" href="/">Home</a>
         </li>
         {{#if logged_in}}
+        {{!-- <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li> --}}
+        <li class="nav-item">
+          <a class="nav-link" href="/dashboard" tabindex="-1" aria-disabled="true">My Profile</a>
+        </li>
         <li class="nav-item" >
           <button type="button" class="btn" id="logoutBtn">Logout</button>
         </li>
@@ -34,6 +48,9 @@
         {{else}}
         {{!-- <li class="nav-item">
           <a class="nav-link active" href="/signup">Sign-Up</a>
+        </li> --}}
+        {{!-- <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
         </li> --}}
         <li class="nav-item">
           <a class="nav-link" href="/login">Login</a>
@@ -45,9 +62,12 @@
   <main>
       <!--iterate over each post and display any available-->
     {{{body}}}
-    {{#if logged_in}}
+    {{!-- {{#if logged_in}}
     <script src="/js/logout.js"></script>
-    {{/if}}
+    {{/if}} --}}
   </main>
+  {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+  {{/if}}
 </body>
 </html>
