@@ -1,8 +1,17 @@
+
+<form id="login" class="login" method="post">
+
+<div class="margin">
+
 <form id="login" method="post">
+
   <div class="form-group">
+
     <label for="exampleInputEmail1">Email address</label>
     <input name="email" type="email" class="form-control" id="email-login" placeholder="Enter email">
+     <div class="never">
     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Password</label>
@@ -11,7 +20,13 @@
   </br>
   <button type="submit" class="btn btn-primary" id="loginBtn">Submit</button>
 </form>
+
+<a id="signup" class="instead" href="/signup">Sign Up Instead</a>
+
+
 </br>
 <a id="signup" href="/signup">Sign Up Instead</a>
+</div>
+
 
 <script src="/js/login.js"></script>
