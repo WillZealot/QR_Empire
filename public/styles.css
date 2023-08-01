@@ -17,14 +17,14 @@ body {
     border: 5px solid black ;
     border-radius: 3px;
     margin: 250px;
-  
+    display: flex;
+    flex-wrap: wrap;
 
 }
 
 .margin{
     margin-left: 300px;
     margin-right: 300px;
-}
     display: flex;
     flex-wrap: wrap;
 }
