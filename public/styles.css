@@ -1,7 +1,3 @@
-*{
-    font-family:sans-serif;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
 
 body {
     background-image:url("./assets/146685.jpg");
@@ -9,61 +5,19 @@ body {
     background-attachment: fixed;
     background-position: center;
 }
-
-.homepage {
-    width: 700px;
-    height: auto;
-    background-color: rgba(255, 215, 0,.5);
-    border: 5px solid black ;
-    border-radius: 3px;
-    margin: 250px;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.login, .signup {
-    margin-top: 10%;
-    font-weight: bolder;
-}
-    
-.form-control {
-    display:flex;
-    width: 400px; 
-    font-size: 16px; 
-    margin-left: -20%;
-    padding: 10px;
-}
-    
-.form-group{
-    padding-left: 45%;
-    margin-top: 23px;
-}
-       
-.btn-primary, .instead {
-    margin-left: 45%;
-    margin-top: 5%;
-    margin-bottom: 2%;
-}
-
-.never {
-    margin-left: -14%;
-}
-.instead  {
-    margin-left: 43.5%;
-}
-
-
 .margin{
     margin-left: 300px;
     margin-right: 300px;
-    display: flex;
-    flex-wrap: wrap;
 }
-
-#homepageText{
+.font {
+    font-size: 25px;
     color: white;
-    font-size: large;
-    display: flex;
-    flex-wrap: wrap;
 }
-
+.homepage{
+    background-color: beige;
+    font-size: 25px;
+    color: black;
+}
+.header{
+    background-image:url("./assets/146685.jpg");
+}

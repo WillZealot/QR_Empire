@@ -7,11 +7,8 @@
   <link rel="stylesheet"  href="./styles.css">
 </head>
 <body>
-  <!-- Image and text -->
-  <header>
-    <nav class="navbar navbar-light bg-light">
-    <nav class="navbar navbar-light bg-light ">
-      <a class="navbar-brand" href="/">
+    <nav class="navbar navbar-light bg-light header">
+      <a class="navbar-brand font" href="/">
         QREmpire
         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-qr-code" viewBox="0 0 16 16">
             <path d="M2 2h2v2H2V2Z"/>
@@ -22,33 +19,26 @@
         </svg>
       </a>
       <ul class="nav justify-content-end">
-        {{!-- <li class="nav-item">
-          <a class="nav-link" href="/">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/dashboard" tabindex="-1" aria-disabled="true">My Profile</a>
-        </li> --}}
-        <li class="nav-item">
-          <a class="nav-link" href="/">Home</a>
-        </li>
         {{#if logged_in}}
-        {{!-- <li class="nav-item">
-          <a class="nav-link" href="/">Home</a>
-        </li> --}}
-        <li class="nav-item">
-          <a class="nav-link" href="/dashboard" tabindex="-1" aria-disabled="true">My Profile</a>
+         <li class="nav-item">
+          <a class="nav-link font" href="/">Home</a>
         </li>
         <li class="nav-item" >
-          <button type="button" class="btn" id="logoutBtn">Logout</button>
+          <button type="button" class="btn font" id="logoutBtn">Logout</button>
         </li>
         {{else}}
         <li class="nav-item">
-          <a class="nav-link" href="/login">Login</a>
+          <a class="nav-link font" href="/login">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link font" href="/signup">Sign-Up</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link font" href="/dashboard" tabindex="-1" aria-disabled="true">My Profile</a>
         </li>
         {{/if}}
       </ul>
     </nav>
-  </header>
   <main>
     {{{body}}}
   </main>

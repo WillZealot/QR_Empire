@@ -1,11 +1,3 @@
-// user model goes here
-//
-//
-// id: 1,
-// name: "bob",
-// email: "bob@gmail.com",
-// password: "lhjkb132lh&*^&^&*999"
-//
 const { Model, DataTypes } = require('sequelize')
 const bcrypt = require('bcrypt')
 const sequelize = require('../config/connection')
