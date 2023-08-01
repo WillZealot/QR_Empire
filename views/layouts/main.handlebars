@@ -7,24 +7,12 @@
   <link rel="stylesheet"  href="./styles.css">
 </head>
 <body>
-  {{!-- <div class="header">
-    <header>
-      <h1>QR Empire</h1>
-    </header>
-    <nav>
-    <a href="/">Home</a>
-    {{#if loggedIn}}
-    <button id="logout">Logout</button>
-    {{else}}
-    <a id="login" href="api/login">Login</a>
-    <a id="dashboard" href="api/dashboard">Dashboard</a>
-    {{/if}}
-  </nav>
-  </div> --}}
   <!-- Image and text -->
+  <header>
     <nav class="navbar navbar-light bg-light">
+  <header class="mainHeader">
+    <nav class="navbar navbar-light bg-light ">
       <a class="navbar-brand" href="/">
-        {{!-- <img src="/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt=""> --}}
         QREmpire
         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-qr-code" viewBox="0 0 16 16">
             <path d="M2 2h2v2H2V2Z"/>
@@ -35,19 +23,34 @@
         </svg>
       </a>
       <ul class="nav justify-content-end">
-        <li class="nav-item">
+        {{!-- <li class="nav-item">
           <a class="nav-link" href="/">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/dashboard" tabindex="-1" aria-disabled="true">My Profile</a>
+        </li> --}}
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
         </li>
         {{#if logged_in}}
+        {{!-- <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li> --}}
+        <li class="nav-item">
+          <a class="nav-link" href="/dashboard" tabindex="-1" aria-disabled="true">My Profile</a>
+        </li>
         <li class="nav-item" >
           <button type="button" class="btn" id="logoutBtn">Logout</button>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/dashboard" tabindex="-1" aria-disabled="true">My Profile</a>
         </li>
         {{else}}
         {{!-- <li class="nav-item">
           <a class="nav-link active" href="/signup">Sign-Up</a>
+        </li> --}}
+        {{!-- <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
         </li> --}}
         <li class="nav-item">
           <a class="nav-link" href="/login">Login</a>
@@ -55,12 +58,16 @@
         {{/if}}
       </ul>
     </nav>
+  </header>
   <main>
       <!--iterate over each post and display any available-->
     {{{body}}}
-    {{#if logged_in}}
+    {{!-- {{#if logged_in}}
     <script src="/js/logout.js"></script>
-    {{/if}}
+    {{/if}} --}}
   </main>
+  {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+  {{/if}}
 </body>
 </html>

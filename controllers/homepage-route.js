@@ -6,28 +6,19 @@ const withAuth = require('../utils/auth');
 // GET all post for homepage
 router.get('/', async (req, res) => {
   try {
-    // const userData = await QRLink.findAll({
-    //   include: [
-    //     {
-    //       model: User,
-    //     },
-    //   ],
-    // });
-
-    // const users = userData.map((users) => users.get({ plain: true }));
-
-    res.render('homepage');
+    res.status(200).render('homepage')
   } catch (err) {
-    res.status(500).json(err);
+    res.status(400).json(err)
   }
 });
 
 router.get('/login', async (req, res) => {
-  try {
-    res.status(200).render('login');
-  } catch (err) {
-    res.status(400).json(err);
+  if (req.session.logged_in) {
+    res.redirect('/dashboard');
+    return;
   }
+
+  res.render('login');
 });
 
 router.get('/signup', async (req, res) => {
