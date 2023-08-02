@@ -19,12 +19,15 @@
         </svg>
       </a>
       <ul class="nav justify-content-end">
-        {{#if logged_in}}
          <li class="nav-item">
           <a class="nav-link font" href="/">Home</a>
         </li>
+        {{#if logged_in}}
         <li class="nav-item" >
           <button type="button" class="btn font" id="logoutBtn">Logout</button>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link font" href="/dashboard" tabindex="-1" aria-disabled="true">My Profile</a>
         </li>
         {{else}}
         <li class="nav-item">
@@ -32,9 +35,6 @@
         </li>
         <li class="nav-item">
           <a class="nav-link font" href="/signup">Sign-Up</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link font" href="/dashboard" tabindex="-1" aria-disabled="true">My Profile</a>
         </li>
         {{/if}}
       </ul>

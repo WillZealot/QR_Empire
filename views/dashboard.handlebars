@@ -1,31 +1,32 @@
 </br>
-<div class='card-header col-md-10'>
+<div class=>
+  <div class="opaqueback">
+    <div class="dashname">
   <h1>Hello {{name}}</h1>
     <div>
-        <h2 class="margin">URLs-Recently-Generated</h2>
+        <h2>Your QR Codes:</h2>
+    </div>
+    </div>
     </div>
   </div>
-<div class="margin">
+<div>
   {{#if qrlinks.length}}
-  <div class="card" class="mx-auto pt-8" style="width: 700px;">
-    <div class="card-header">
-      <blockquote class="blockquote mb-0">
+  <div class="qrcard" style="width: 600px; margin:auto;">
+    
+      <blockquote class=" d-block blockquote mb-0">
          {{#each qrlinks as |qrlink|}}
-          <img src="https://qrickit.com/api/qr.php?d={{qrlink.description}}&addtext={{qrlink.description}}&qrsize=150&t=p&e=m" alt="Created on {{format_date qrlink.date_created}}">
+         </br>
+         <div class="dashname">
+          <img src="https://qrickit.com/api/qr.php?d={{qrlink.description}}&addtext={{qrlink.description}}&qrsize=150&t=p&e=m" alt="QRCODE">
+           <h4>{{format_date qrlink.date_created}}</h4>
+           </div>
           {{/each}}
       </blockquote>
-    </div>
+    
     </br>
   </div>
   </br>
   {{/if}}
-  <label for="exampleDataList" class="form-label font">Url Insert:</label>
-  <p>
-    <input class="form-control font" id="UrlBtn" placeholder="Insert your new Url">
-  </p>
-  <div class="d-grid gap-2 d-md-block">
-    <button class="btn btn-primary font" type="button" id="newUrlBtn">Add New Url</button>
-  </div>
 </div>
 <script src="/js/newUrl.js" ></script>
 
