@@ -14,10 +14,32 @@ body {
     color: white;
 }
 .homepage{
-    background-color: beige;
+    max-width: 900px;
     font-size: 25px;
     color: black;
+    padding-right: 25px;
+    padding-left: 25px;
 }
 .header{
     background-image:url("./assets/146685.jpg");
+}
+
+.opaqueback{
+    margin:auto;
+    max-width: fit-content;
+    background-color: rgba(192,192,192,0.5);
+    margin-top: 50px;
+    border-radius: 25px;
+}
+
+.dashname{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.qrcard{
+    width:600px;
+    margin: auto;
+    background-color: rgba(192,192,192,0.5);
+    border-radius: 25px;
 }
