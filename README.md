@@ -10,15 +10,15 @@ I want to create a QR Code of my website<br>
 So that I can use that QR Code for my customer to visit my website easier<br>
 
 ## Acceptance Criteria
-Given I am on the QREmpire.com<br>
-When the website site opens with no issues<br>
-Then I am sign up or login to my account<br>
-When I get login<br> 
-Then I can view all my QR Code which I generated<br>
-When I am homepage <br>
-Then I can see a form to generate a new QR Code<br>
-When I input the link and click generate<br>
-Then I can get a new QR Code for that link
+- Given I am on the QREmpire.com<br>
+- When the website site opens with no issues<br>
+- Then I am sign up or login to my account<br>
+- When I get login<br> 
+- Then I can view all my QR Code which I generated<br>
+- When I am homepage <br>
+- Then I can see a form to generate a new QR Code<br>
+- When I input the link and click generate<br>
+- Then I can get a new QR Code for that link
 
 ## Usage
 ![app](./public/assets/Homepage.png)
