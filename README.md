@@ -25,6 +25,6 @@ Then I can get a new QR Code for that link
 
 ## Links
 
-[Deployed site]()
+[Deployed site](https://qrempire-7ee960eb8dee.herokuapp.com/)
 
 [Github](https://github.com/WillZealot/QR_Empire)
