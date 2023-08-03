@@ -8,7 +8,7 @@
 </head>
 <body>
     <nav class="navbar navbar-light bg-light header">
-      <a class="navbar-brand font" href="/">
+      <a class="navbar-brand font" id="colorTextWhite" href="/">
         QREmpire
         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-qr-code" viewBox="0 0 16 16">
             <path d="M2 2h2v2H2V2Z"/>
@@ -19,22 +19,22 @@
         </svg>
       </a>
       <ul class="nav justify-content-end">
-        <li class="nav-item">
-          <a class="nav-link font" href="/">Home</a>
+         <li class="nav-item">
+          <a class="nav-link font" id="colorTextWhite" href="/">Home</a>
         </li>
         {{#if logged_in}}
         <li class="nav-item" >
-          <button type="button" class="btn font" id="logoutBtn">Logout</button>
+          <button type="button" class="btn font" id="colorTextWhite" id="logoutBtn">Logout</button>
         </li>
         <li class="nav-item">
-          <a class="nav-link font" href="/dashboard" tabindex="-1" aria-disabled="true">My Profile</a>
+          <a class="nav-link font" id="colorTextWhite" href="/dashboard" tabindex="-1" aria-disabled="true">My Profile</a>
         </li>
         {{else}}
         <li class="nav-item">
-          <a class="nav-link font" href="/login">Login</a>
+          <a class="nav-link font" id="colorTextWhite" href="/login">Login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link font" href="/signup">Sign-Up</a>
+          <a class="nav-link font" id="colorTextWhite" href="/signup">Sign-Up</a>
         </li>
         {{/if}}
         {{#if logged_in}}
