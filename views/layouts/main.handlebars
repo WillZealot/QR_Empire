@@ -19,7 +19,7 @@
         </svg>
       </a>
       <ul class="nav justify-content-end">
-         <li class="nav-item">
+        <li class="nav-item">
           <a class="nav-link font" href="/">Home</a>
         </li>
         {{#if logged_in}}
@@ -37,13 +37,16 @@
           <a class="nav-link font" href="/signup">Sign-Up</a>
         </li>
         {{/if}}
+        {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+  {{/if}}
       </ul>
     </nav>
   <main>
     {{{body}}}
   </main>
-  {{#if logged_in}}
+  {{!-- {{#if logged_in}}
     <script src="/js/logout.js"></script>
-  {{/if}}
+  {{/if}} --}}
 </body>
 </html>
