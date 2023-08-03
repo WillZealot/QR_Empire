@@ -37,13 +37,16 @@
           <a class="nav-link font" id="colorTextWhite" href="/signup">Sign-Up</a>
         </li>
         {{/if}}
+        {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+  {{/if}}
       </ul>
     </nav>
   <main>
     {{{body}}}
   </main>
-  {{#if logged_in}}
+  {{!-- {{#if logged_in}}
     <script src="/js/logout.js"></script>
-  {{/if}}
+  {{/if}} --}}
 </body>
 </html>
