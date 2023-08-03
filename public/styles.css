@@ -11,14 +11,19 @@ body {
 }
 .font {
     font-size: 25px;
-    color: white;
 }
+
+#colorTextWhite{
+    color:white;
+}
+
 .homepage{
     max-width: 900px;
     font-size: 25px;
     color: black;
     padding-right: 25px;
     padding-left: 25px;
+    color:white;
 }
 .header{
     background-image:url("./assets/146685.jpg");
