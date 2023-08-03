@@ -17,6 +17,10 @@ body {
     color:white;
 }
 
+#logoutBtn{
+    color:white;
+}
+
 .homepage{
     max-width: 900px;
     font-size: 25px;
